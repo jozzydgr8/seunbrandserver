@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const userModel = require('../MongooseSchema/UserSchema');
+const userModel = require('../schema/userSchema');
 
 const requireAdmin = async (req, res, next) => {
   const { authorization } = req.headers;

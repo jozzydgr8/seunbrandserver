@@ -11,6 +11,13 @@ app.use(cors());
 
 //route middleware
 app.use('/blog',require('./routes/blogRoute'));
+app.use('/subscribe', require('./routes/subscribeRoute'));
+app.use('/user', require('./routes/userRoute'));
+app.use('/message', require('./routes/emailRoute'));
+
+
+
+
 
 //conrct to database
 mongoose.connect(process.env.mongoose_uri)
