@@ -2,7 +2,7 @@ const User = require('../schema/userSchema');
 const jwt = require('jsonwebtoken');
 
 const genToken = (_id)=>{
-    return jwt.sign({_id}, process.env.jwtSecret, {expiresIn:'2d'})
+    return jwt.sign({_id}, process.env.jwt_secret, {expiresIn:'2d'})
 }
 const addUser = async(req,res)=>{
     const {email, password} = req.body;
