@@ -5,7 +5,9 @@ const subscribeSchema = new Schema({
     email:{
         type:String,
         required:true,
-        lowercase:true
+        lowercase:true,
+        trim:true,
+        unique:true
     },
     firstName:{
         type:String,
